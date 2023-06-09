@@ -1,11 +1,11 @@
-import axios, { AxiosResponse, AxiosRequestConfig } from "axios";
+import axios, { AxiosResponse } from "axios";
 import { BASE_URL } from "./paths";
 import { BodyType, ParamType } from "./types";
 
 type Options = {
   path: string;
   method: "GET" | "POST" | "PUT" | "DELETE";
-  body?: ParamType;
+  body?: { [key: string]: any };
   headers?: ParamType;
 };
 
