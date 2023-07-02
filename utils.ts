@@ -14,9 +14,9 @@ export const internalAPICallDo = async (
 ): Promise<AxiosResponse<BodyType<any>, any>> => {
   try {
     const url = `${BASE_URL}/${options.path}`;
-    return await axios({ ...options, url });
+    return await axios({ ...options, data: options.body, url });
   } catch (err) {
     console.log("Error on Axios call: ", err);
-    throw new Error("Unexpected error");
+    return err.response
   }
 };

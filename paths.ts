@@ -15,4 +15,6 @@ export const PATHS = {
         student: 'signup/student',
         teacher: 'signup/teacher'
     },
-}
+    teacher: 'teacher',
+    teachers: 'teachers'
+};
